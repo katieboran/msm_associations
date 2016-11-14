@@ -4,6 +4,5 @@ class Actor < ActiveRecord::Base
  #- dob: no rules
  #- bio: no rules
  #- image_url: no rules
- validates :name, :presence =>true, :uniqueness =>dob
- validates :actor_id, :presence =>true
+ validates :name, :presence =>true, :uniqueness => { :scope => :dob }
 end
