@@ -1,2 +1,9 @@
-class Actor < ApplicationRecord
+class Actor < ActiveRecord::Base
+#Actor:
+ #- name: must be present; must be unique in combination with dob
+ #- dob: no rules
+ #- bio: no rules
+ #- image_url: no rules
+ validates :name, :presence =>true, :uniqueness =>dob
+ validates :actor_id, :presence =>true
 end
