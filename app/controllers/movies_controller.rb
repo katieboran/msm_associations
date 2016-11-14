@@ -20,11 +20,11 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new
 
+    @movie.image_url = params[:image_url]
     @movie.title = params[:title]
     @movie.year = params[:year]
     @movie.duration = params[:duration]
     @movie.description = params[:description]
-    @movie.image_url = params[:image_url]
     @movie.director_id = params[:director_id]
 
     save_status = @movie.save

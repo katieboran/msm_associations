@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # Routes for the Movie resource:
   # CREATE
   get "/movies/new", :controller => "movies", :action => "new"
+  get "/create_movie", :controller => "movies", :action => "create"
   post "/create_movie", :controller => "movies", :action => "create"
 
   # READ
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
   # UPDATE
   get "/movies/:id/edit", :controller => "movies", :action => "edit"
-  post "/update_movie/:id", :controller => "movies", :action => "update"
+  get "/update_movie/:id", :controller => "movies", :action => "update"
 
   # DELETE
   get "/delete_movie/:id", :controller => "movies", :action => "destroy"
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   # Routes for the Director resource:
   # CREATE
   get "/directors/new", :controller => "directors", :action => "new"
+  get "/create_director", :controller => "directors", :action => "create"
   post "/create_director", :controller => "directors", :action => "create"
 
   # READ
